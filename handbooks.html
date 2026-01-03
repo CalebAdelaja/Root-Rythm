@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Handbooks</title>
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <h2 class="logo">StunBook</h2>
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+           <span class="menu-icon"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="root.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="handbooks.html">Shop</a></li>
+        </ul>
+    </nav>
+
+    <section class="shop-section">
+        <div class="shop-header">
+            <h1>Student Handbooks</h1>
+            <p>Essential guides for your academic journey</p>
+        </div>
+
+        <div class="cart-icon-container">
+            <button class="cart-btn" onclick="toggleCart()">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+
+        <div class="handbooks-grid" id="handbooksGrid">
+            <!-- Handbooks will be dynamically loaded here -->
+        </div>
+
+        <!-- Shopping Cart Sidebar -->
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" onclick="toggleCart()">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="cart.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
+
